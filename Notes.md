@@ -5,6 +5,7 @@
 # _Done:_
 
 1. make logo icon's transparent background
+2. to use async await functios even you use them inside another async function and await them or if this is not available use it directly and get the data using .then()
 
 # _problems solved:_
 

@@ -1,12 +1,14 @@
 /* Header Start */
 :root {
   --color1: #f2cb00;
+  --color1_1: #dcb700;
   --color2: #1f2846;
   --color2_1: #4c536b;
   --color3: #fafafa;
   --color3_1: #ececec;
   --color4: #fa0000;
   --color5: #1e3a8a;
+  --darkblue: #002ead;
   --color5_1: #2b3dda;
   --color5_2: #0f164e;
   --color5_3: #111857;
@@ -20,7 +22,7 @@
 header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   max-width: 1600px;
   background-color: var(--color2);
@@ -438,19 +440,19 @@ header {
 .social_btn:hover {
   box-shadow: 5px 1rem 1.5rem rgba(0, 0, 0, 0.6);
 }
-.fa-github {
+.about .fa-github {
   color: #fff;
 }
-.fa-linkedin,
-.fa-telegram {
+.about .fa-linkedin,
+.about .fa-telegram {
   width: 3.3rem;
   height: 3.3rem;
   color: #0077b5;
   background-color: #fff;
   position: relative;
 }
-.fa-linkedin::before,
-.fa-telegram::before {
+.about .fa-linkedin::before,
+.about .fa-telegram::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -460,10 +462,6 @@ header {
 .leetcode_img {
   width: 100%;
 }
-
-/* .about_content {
-   padding: 10% 0 10% 0; 
-} */
 
 .about_info {
   min-height: 100%;
@@ -527,17 +525,55 @@ header {
 .projects {
   background-image: linear-gradient(var(--color5_3), 70%, var(--color5_1));
   color: #fff;
+  gap: 2rem;
+}
+
+.projects_wrapeer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--color5_2);
+}
+
+.p_nav_btns {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4rem;
+  background-color: var(--color7_1);
+}
+.p_nav_btn {
+  width: 50%;
+  border-radius: 3rem;
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #fff;
+  background-color: var(--color8);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.p_nav_btn:hover {
+  outline: 1.12rem solid var(--color1_1);
+}
+
+.p_nav_btn.active {
+  outline: 1.12rem solid var(--color1_1);
+  z-index: 1;
 }
 
 .projects_sec {
-  width: 85%;
-  padding: 2rem;
-  border-radius: 2rem;
+  width: 100%;
   display: grid;
   column-gap: 2rem;
   row-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
-  background-color: var(--color5_2);
 }
 
 .project {
@@ -554,37 +590,123 @@ header {
   height: 90%;
   width: 100%;
   position: absolute;
-  bottom: -10%;
+  bottom: 0;
   left: 0;
-  background-color: wheat;
+  transform: translateY(80%);
   color: #000;
+  transition: all 500ms;
 }
+.project_overlay:hover {
+  transform: translateY(0);
+}
+
 .p_head {
   height: 20%;
   background-color: var(--color1);
   color: #000;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .p_desc_wrapper {
-  padding: 2rem 3rem;
-  height: 90%;
+  height: 80%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  background-color: wheat;
 }
 .p_desc {
   font-size: 2rem;
 }
 .p_btns {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   font-size: 2rem;
 }
 .p_btn {
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: #2b3dda;
   text-decoration: none;
   color: #fff;
+  border-radius: 1rem;
 }
 /* Projects Sec End */
+
+/* Experience Sec Start */
+.exp {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+/* Experience Sec End */
+
+/* Footer Starts */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  background-image: linear-gradient(var(--color5_3), 95%, var(--color5_1));
+  color: #fff;
+}
+
+.box_container {
+  width: 80%;
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 20%;
+  /* align-self: center; */
+}
+.box h3 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--color1_1);
+}
+.box a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.box p {
+  font-size: 1.5rem;
+}
+
+.box p i,
+.box:nth-child(2) i {
+  margin-right: 1rem;
+}
+.box:nth-child(2) a:hover,
+.footer_social a:hover {
+  color: var(--color1);
+}
+
+.footer_social {
+  display: flex;
+  gap: 3rem;
+}
+.footer_social a {
+  font-size: 3rem;
+}
+.footer_msg {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.footer_msg a {
+  text-decoration: none;
+  color: var(--color1_1);
+}
+/* Footer Ends */

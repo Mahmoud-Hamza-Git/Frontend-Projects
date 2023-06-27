@@ -27,12 +27,12 @@
         <div class="list_container">
           <ul class="nav_list">
             <li class="nav_close">X</li>
-            <li><a class="nav_item" href="#">Home</a></li>
-            <li><a class="nav_item" href="#">About</a></li>
-            <li><a class="nav_item" href="#">Skills</a></li>
-            <li><a class="nav_item" href="#">Education</a></li>
-            <li><a class="nav_item" href="#">Projects</a></li>
-            <li><a class="nav_item" href="#">Experience</a></li>
+            <li><a class="nav_item" href="#home">Home</a></li>
+            <li><a class="nav_item" href="#about">About</a></li>
+            <li><a class="nav_item" href="#skills">Skills</a></li>
+            <li><a class="nav_item" href="#education">Education</a></li>
+            <li><a class="nav_item" href="#projects">Projects</a></li>
+            <li><a class="nav_item" href="#experience">Experience</a></li>
           </ul>
         </div>
 
@@ -41,12 +41,12 @@
           <hr />
           <hr />
         </div>
-        <a target="_blank" href="#"><img src="./assets/images/my_logo2.png" alt="logo" class="logo" /></a>
+        <a href="#home"><img src="./assets/images/my_logo2.png" alt="logo" class="logo" /></a>
       </nav>
     </header>
 
     <!-- MAIN SEC -->
-    <section class="main">
+    <section class="main" id="home">
       <div class="random-dots"><div class="dots_overlay"></div></div>
       <div class="main_sec">
         <div class="side main_img center_v">
@@ -66,8 +66,8 @@
     <!-- MAIN SEC END-->
 
     <!-- ABOUT ME -->
-    <section class="about sec-wrapper">
-      <h2 class="sec_title about_sec_title"><i class="fa-solid fa-laptop"></i>About <span>Me</span></h2>
+    <section class="about sec-wrapper" id="about">
+      <h2 class="sec_title about_sec_title"><i class="fa-solid fa-user"></i>About <span>Me</span></h2>
       <div class="about_sec">
         <div class="social_btns">
           <a class="social_btn" target="_blank" href="https://github.com/Mahmoud-Hamza-Git">
@@ -102,7 +102,7 @@
               <span>Email:</span
               ><a target="_blank" href="mailto:mahmoud.hamza.ce@gmail.com">mahmoud.hamza.ce@gmail.com</a>
             </div>
-            <a class="resume_btn" type="button" href="#">Resume <i class="fa-solid fa-angle-right"></i></a>
+            <a class="resume_btn" type="button" href="">Resume <i class="fa-solid fa-angle-right"></i></a>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
     <!-- ABOUT ME END-->
 
     <!-- SKILLS -->
-    <section class="skills sec-wrapper">
+    <section class="skills sec-wrapper" id="skills">
       <h2 class="sec_title skills_sec_title"><i class="fa-solid fa-laptop"></i>My <span>Skills</span></h2>
       <div class="skills_sec">
         <!-- <div class="skill">
@@ -124,7 +124,7 @@
     <!-- SKILLS END-->
 
     <!-- EDUCATION -->
-    <section class="edu sec-wrapper">
+    <section class="edu sec-wrapper" id="education">
       <h2 class="sec_title edu_sec_title">
         <i class="fa-solid fa-book-open-reader"></i>My <span>Education</span>
       </h2>
@@ -141,7 +141,7 @@
         <div class="wr_wrapper">
           <ul class="pages_wrapper">
             <!-- <li class="page">
-              <a target="_blank" href="#">
+              <a target="_blank" href="">
                 <i class="fa-solid fa-book-open-reader"></i>
                 <p>Design Patterns</p>
               </a>
@@ -155,88 +155,81 @@
     <!-- EDUCATION END -->
 
     <!-- PROJECTS -->
-    <section class="projects sec-wrapper">
-      <h2 class="sec_title skills_sec_title"><i class="fa-solid fa-laptop"></i><span>Projects</span></h2>
-      <div class="projects_sec">
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">demo</a
-                ><a href="" target="_blank" class="p_btn">demo</a>
-              </div>
-            </div>
-          </div>
+    <section class="projects sec-wrapper" id="projects">
+      <h2 class="sec_title projects_sec_title"><i class="fa-solid fa-laptop"></i><span>Projects</span></h2>
+      <div class="projects_wrapeer">
+        <div class="p_nav_btns">
+          <button type="button" disabled class="p_nav_btn active">Projects</button>
+          <button type="button" class="p_nav_btn">Others</button>
         </div>
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">demo</a
-                ><a href="" target="_blank" class="p_btn">demo</a>
+        <div class="projects_sec">
+          <!-- <div class="project">
+            <div class="project_overlay">
+              <h2 class="p_head">project 1</h2>
+              <div class="p_desc_wrapper">
+                <p class="p_desc">this project is awesome this project is awesome this project is awesome</p>
+                <div class="p_btns">
+                  <a href="" target="_blank" class="p_btn">demo</a
+                  ><a href="" target="_blank" class="p_btn">demo</a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">codedemo</a
-                ><a href="" target="_blank" class="p_btn">codedemo</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">codedemo</a
-                ><a href="" target="_blank" class="p_btn">codedemo</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">demo</a
-                ><a href="" target="_blank" class="p_btn">demo</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project_overlay">
-            <h2 class="p_head">project 1</h2>
-            <div class="p_desc_wrapper">
-              <p class="p_desc">this project is awesome</p>
-              <div class="p_btns">
-                <a href="" target="_blank" class="p_btn">demo</a
-                ><a href="" target="_blank" class="p_btn">demo</a>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
     <!-- PROJECTS END-->
 
-    <!-- CONTACT_ME -->
-    <section class="main">CONTACT_ME</section>
-    <!-- CONTACT_ME END-->
+    <!-- Experience Stars-->
+    <section class="exp" id="experience">Experience Section Under Construction...</section>
+    <!-- Experience ENDs-->
+
+    <!-- Footer Starts -->
+    <section class="footer">
+      <div class="box_container">
+        <div class="box">
+          <h3>Hamza's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /></p>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#projects"><i class="fas fa-chevron-circle-right"></i> projects</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <p><i class="fas fa-phone"></i>+20 XXX-XXX-XXXX</p>
+          <p><i class="fas fa-envelope"></i>mahmoud.hamza.ce@gmail.com</p>
+          <p><i class="fas fa-map-marked-alt"></i>Egypt</p>
+          <div class="footer_social">
+            <a href="https://www.linkedin.com/in/mahmoud-hamza2022/" aria-label="LinkedIn" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/Mahmoud-Hamza-Git" aria-label="GitHub" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="mailto:mahmoud.hamza.ce@gmail.com" aria-label="Mail" target="_blank"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a href="https://t.me/M_hamza1" aria-label="Telegram" target="_blank">
+              <i class="fa-brands fa-telegram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="footer_msg">
+        Created with 💖 by
+        <a href="https://www.linkedin.com/in/mahmoud-hamza2022/"> Mahmoud Hamza</a>
+      </h3>
+    </section>
+    <!-- Footer Ends -->
 
     <!-- Typed CDN -->
     <script
@@ -251,8 +244,6 @@
       integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
-
-    <!-- Scroll Reveal -->
 
     <!-- JS SCRIPTS -->
     <script src="assets/js/app.js" defer></script>

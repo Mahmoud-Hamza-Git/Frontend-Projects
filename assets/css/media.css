@@ -59,6 +59,21 @@
     width: 25%;
   }
   /* Skills Sec End*/
+
+  /* Projects Sec Starts*/
+  .projects_sec {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer Starts*/
+  .box_container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .box:last-child {
+    grid-column: span 2;
+    margin-left: 0;
+    align-items: center;
+  }
 }
 
 @media (max-width: 870px) {
@@ -114,6 +129,17 @@
   }
   /* Skills Sec End*/
 }
+@media (max-width: 700px) {
+  /* Projects Sec Starts*/
+  .projects_sec {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer Starts*/
+  .box h3 {
+    font-size: 2rem;
+  }
+}
 
 @media (max-width: 550px) {
   /* Root Font */
@@ -147,5 +173,35 @@
   }
   .edu_info p {
     font-size: 1.7rem;
+  }
+
+  /* Projects Sec Starts*/
+  .p_nav_btn {
+    font-size: 1.5rem;
+  }
+  .p_nav_btns {
+    padding: 0.5rem;
+  }
+  .p_nav_btn:hover {
+    outline-width: 0.6rem;
+  }
+
+  .p_nav_btn.active {
+    outline-width: 0.6rem;
+  }
+
+  /* Footer Starts*/
+  .box_container {
+    grid-template-columns: 1fr;
+  }
+  .box:last-child {
+    grid-column: 1;
+  }
+  .box {
+    margin-left: 0;
+    align-items: center;
+  }
+  .box:first-child p {
+    width: 70%;
   }
 }
