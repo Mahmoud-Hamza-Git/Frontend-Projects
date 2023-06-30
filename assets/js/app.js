@@ -32,13 +32,26 @@ var typed = new Typed('.typing', {
 });
 
 // Smooth Scrolling (using event delegation)
-const navList = document.querySelector('.nav_list');
-navList.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: document.querySelector(`${e.target.attributes?.href.value}`).offsetTop - 79,
-    left: 100,
-    behavior: 'smooth',
+// const navList = document.querySelector('.nav_list');
+// navList.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   window.scrollTo({
+//     top: document.querySelector(`${e.target.attributes?.href.value}`).offsetTop - 79,
+//     left: 100,
+//     behavior: 'smooth',
+//   });
+// });
+
+// Smooth Scrolling
+const links = document.querySelectorAll('a[href*="#"]');
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); //don't forget it
+    window.scrollTo({
+      top: document.querySelector(`${link.attributes?.href?.value}`).offsetTop - 79,
+      left: 10,
+      behavior: 'smooth',
+    });
   });
 });
 
@@ -84,14 +97,14 @@ function displayProjects(type = 'projects') {
     let projectsHTML = ``;
     for (let i = 0; i < data.length; i++) {
       projectsHTML += `
-      <div class="project">
+      <div class="project" style="background-image: url('${data[i].img}');">
         <div class="project_overlay">
           <h2 class="p_head">${data[i].name}</h2>
           <div class="p_desc_wrapper">
             <p class="p_desc">${data[i].desc}</p>
             <div class="p_btns">
-              <a href="${data[i].code_link}" target="_blank" class="p_btn">code</a
-              ><a href="${data[i].demo_link}" target="_blank" class="p_btn">demo</a>
+              <a href="${data[i].repo_link}" target="_blank" class="p_btn">repo</a>
+              <a href="${data[i].demo_link}" target="_blank" class="p_btn">demo</a>
             </div>
           </div>
         </div>
@@ -136,9 +149,9 @@ async function addingPages() {
     for (let i = 0; i < data.length; i++) {
       pagesHTML += `
       <li class="page">
-        <a target="_blank" href="">
+        <a target="_blank" href="${data[i].link}">
           <i class="fa-solid fa-book-open-reader"></i>
-          <p>Design Patterns</p>
+          <p>${data[i].name}</p>
         </a>
       </li>
     `;

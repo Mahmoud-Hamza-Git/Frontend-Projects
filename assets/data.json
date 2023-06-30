@@ -1,12 +1,105 @@
 {
   "projects": [
-    { "name": "react project", "desc": "this is very good project created by Mern stack with love in 2023" }
+    {
+      "name": "Car Showroom",
+      "desc": "Landing page using react.",
+      "img": "./assets/images/car_showroom1.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
+      "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
+    },
+    {
+      "name": "Kalbonyan Board",
+      "desc": "Kanban Board using javascript.",
+      "img": "./assets/images/board_project3.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Kalbonyan_Board",
+      "demo_link": "https://kalbonyan-board.netlify.app/"
+    },
+    {
+      "name": "Appie",
+      "desc": "landing page using HTML & CSS",
+      "img": "./assets/images/appie_app.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
+      "demo_link": "https://appie-site1.netlify.app/"
+    },
+    {
+      "name": "Task Manager",
+      "desc": "task manager app using javavscript",
+      "img": "./assets/images/task_manager.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
+      "demo_link": "https://task-manager-54ug.onrender.com/"
+    },
+    {
+      "name": "Omnifood",
+      "desc": "Omnifood app is landing page using HTML&CSS and JavaScript",
+      "img": "./assets/images/omnifood.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
+      "demo_link": "https://hamza-omnifood.netlify.app/"
+    },
+    {
+      "name": "Admin Panel",
+      "desc": "Admin Panel Using React, React Query, node.js, mongoDB. This Panel is under construction from my graduation project",
+      "img": "./assets/images/admin_panel.png",
+      "repo_link": "https://github.com/Alaa-Ahmed-Elbasuony/Front-Project",
+      "demo_link": "#home"
+    },
+    {
+      "name": "Simon Game",
+      "desc": "simon game using Jquery & Javascript",
+      "img": "./assets/images/simon.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
+      "demo_link": "https://hamza-simon-game.netlify.app/"
+    },
+    {
+      "name": "To Do List",
+      "desc": "Todo list app using node, express, mongoDB, ejs render template",
+      "img": "./assets/images/to_do.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
+      "demo_link": "https://to-do-list-t4b9.onrender.com/"
+    }
   ],
-  "others": [
-    { "name": "react project", "desc": "this is very good project created by Mern stack with love in 2023" },
-    { "name": "react project", "desc": "this is very good project created by Mern stack with love in 2023" }
+  "others": [],
+  "writings": [
+    {
+      "name": "MongoDB",
+      "link": "https://adorable-soil-62a.notion.site/MongoDB-85a8de630d4c4e709925f15d4b50d2c0?pvs=4"
+    },
+    {
+      "name": "SOLID Principles & Design Patterns",
+      "link": "https://adorable-soil-62a.notion.site/Solid-Principles-Design-Patterns-1ca2e66e914f4539b1d0678925681476?pvs=4"
+    },
+    {
+      "name": "Web Sockets",
+      "link": "https://adorable-soil-62a.notion.site/section-18-Web-Sockets-8ea2c373803f479ab8770fedcd27cecf?pvs=4"
+    },
+    {
+      "name": "Network",
+      "link": "https://adorable-soil-62a.notion.site/Network-f10237cac7714ec4a2c0380403459702?pvs=4"
+    },
+    {
+      "name": "JavaScript",
+      "link": "https://adorable-soil-62a.notion.site/JavaScript-Course-John-Shmeditman-c9e578bea345471699510bef5187afd1?pvs=4"
+    },
+    {
+      "name": "Problem Solving",
+      "link": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhCxPM5c_YgtAO3TbZ6bCJ796ejuzUr5v1KAu22LWAqK_SBvgnNcS5suf6tU0u1uvipGW_qEah578a/pubhtml?gid=2048114333&single=true"
+    },
+    {
+      "name": "React",
+      "link": "https://adorable-soil-62a.notion.site/Full-Course-Maximilian-3df33f032a1245c4bd6eedd95ac7cccd?pvs=4"
+    },
+    {
+      "name": "React Query",
+      "link": "https://adorable-soil-62a.notion.site/React-query-Tanstack-Query-0374ddf5fbc44ece98de8e3b2c864ab4?pvs=4"
+    },
+    {
+      "name": "Git & Github",
+      "link": "https://adorable-soil-62a.notion.site/Git-GitHub-ef336c372cd34e75840533e46665895d?pvs=4"
+    },
+    {
+      "name": "Information Security",
+      "link": "https://adorable-soil-62a.notion.site/Information-Security-28dfac994c754c048630b76725fd7193?pvs=4"
+    }
   ],
-  "writings": [1, 2, 3, 4, 5, 6],
   "skills": [
     {
       "name": "ReactJS",
@@ -21,36 +114,13 @@
       "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
     },
     {
-      "name": "Redux",
-      "icon": "https://img.icons8.com/color/48/000000/redux.png"
+      "name": "JavaScript",
+      "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
     },
+    { "name": "Docker", "icon": "https://img.icons8.com/fluency/48/docker.png" },
     {
-      "name": "Firebase",
-      "icon": "https://img.icons8.com/color/48/000000/firebase.png"
-    },
-    {
-      "name": "Android",
-      "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
-    },
-    {
-      "name": "MaterialUI",
-      "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
-    },
-    {
-      "name": "ChakraUI",
-      "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
-    },
-    {
-      "name": "TailwindCSS",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-      "name": "Bootstrap",
-      "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-      "name": "Sass",
-      "icon": "https://img.icons8.com/color/48/000000/sass.png"
+      "name": "React Query",
+      "icon": "./assets/images/reactQuery.svg"
     },
     {
       "name": "HTML5",
@@ -61,72 +131,48 @@
       "icon": "https://img.icons8.com/color/48/000000/css3.png"
     },
     {
-      "name": "JavaScript",
-      "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-      "name": "Java",
-      "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-      "name": "Kotlin",
-      "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
-    },
-    {
-      "name": "PHP",
-      "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-      "name": "Python",
-      "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-      "name": "C++",
-      "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-      "name": "MongoDB",
-      "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-      "name": "MySQL",
-      "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-      "name": "PostgreSQL",
-      "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-      "name": "AWS",
-      "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-      "name": "Heroku",
-      "icon": "https://img.icons8.com/color/48/000000/heroku.png"
-    },
-    {
-      "name": "Netlify",
-      "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-      "name": "DigitalOcean",
-      "icon": "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.png"
-    },
-    {
-      "name": "jQuery",
-      "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
-    },
-    {
       "name": "Git VCS",
       "icon": "https://img.icons8.com/color/48/000000/git.png"
+    },
+    {
+      "name": "Redux",
+      "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
       "name": "GitHub",
       "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
     },
     {
-      "name": "WordPress",
-      "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
+      "name": "MongoDB",
+      "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+    },
+    {
+      "name": "MaterialUI",
+      "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+    },
+    {
+      "name": "C++",
+      "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+    },
+    {
+      "name": "Render",
+      "icon": "./assets/images/render.webp"
+    },
+    {
+      "name": "Vercel",
+      "icon": "./assets/images/vercel.png"
+    },
+    {
+      "name": "Netlify",
+      "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
+    },
+    {
+      "name": "Socket.io",
+      "icon": "./assets/images/socket.png"
     }
   ]
 }
