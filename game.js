@@ -46,7 +46,7 @@ function checkAnswer() {
     if (index == gamePattern.length) {
       setTimeout(() => {
         nextSequence();
-      }, 1000);
+      }, 1500);
     }
   } else {
     playSound('wrong');

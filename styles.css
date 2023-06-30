@@ -1,20 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
+}
+.game_container {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  color: #fef2bf;
 }
 
 .container {
   display: block;
-  width: 50%;
-  margin: auto;
-
 }
 
 .btn {
@@ -52,7 +62,6 @@ body {
   background-color: grey;
 }
 
-footer{
-  text-align: center;
+footer {
   color: white;
 }
