@@ -7,7 +7,7 @@
     <title>PeerCaht</title>
     <link rel="stylesheet" href="style.css" />
     <script>
-      const ROOMID = "<%= roomId %>";
+      const ROOMID = '<%= roomId %>';
     </script>
   </head>
   <body>
@@ -33,16 +33,13 @@
   </body>
 
   <!-- installing ion-icons -->
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  ></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <!-- connect socket -->
   <script src="socket.io/socket.io.js"></script>
 
   <!-- remember that agora sdk script must be put before the main.js file -->
-  <script src="agora-rtm-sdk-1.5.1.js"></script>
+  <!-- <script src="agora-rtm-sdk-1.5.1.js"></script> -->
   <script src="main.js"></script>
 </html>
