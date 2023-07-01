@@ -22,6 +22,13 @@
       "demo_link": "https://appie-site1.netlify.app/"
     },
     {
+      "name": "Video Call App",
+      "desc": "Video Streeming app using Web Socket and WebRTC to make a peer to peer connection between to users",
+      "img": "./assets/images/video_call.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
+      "demo_link": "https://video-call-app-usy7.onrender.com/"
+    },
+    {
       "name": "Task Manager",
       "desc": "task manager app using javavscript",
       "img": "./assets/images/task_manager.png",
@@ -36,6 +43,13 @@
       "demo_link": "https://hamza-omnifood.netlify.app/"
     },
     {
+      "name": "To_Do",
+      "desc": "Todo list app using node, express, mongoDB, ejs render template",
+      "img": "./assets/images/to_do.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
+      "demo_link": "https://to-do-list-t4b9.onrender.com/"
+    },
+    {
       "name": "Admin Panel",
       "desc": "Admin Panel Using React, React Query, node.js, mongoDB. This Panel is under construction from my graduation project",
       "img": "./assets/images/admin_panel.png",
@@ -48,16 +62,24 @@
       "img": "./assets/images/simon.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
       "demo_link": "https://hamza-simon-game.netlify.app/"
-    },
-    {
-      "name": "To Do List",
-      "desc": "Todo list app using node, express, mongoDB, ejs render template",
-      "img": "./assets/images/to_do.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
-      "demo_link": "https://to-do-list-t4b9.onrender.com/"
     }
   ],
-  "others": [],
+  "others": [
+    {
+      "name": "Your Notes(Upcomming..)",
+      "desc": "Notes app is a MEARN STACK based app using node.js, mongoDB and React.js",
+      "img": "./assets/images/your_note.jpg",
+      "repo_link": "#home",
+      "demo_link": "#home"
+    },
+    {
+      "name": "DiagnozeMe_Chat (Upcomming..)",
+      "desc": "My Graduation Project, A MERN Stack-based app",
+      "img": "./assets/images/diagnoze_me.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
+      "demo_link": "#home"
+    }
+  ],
   "writings": [
     {
       "name": "MongoDB",

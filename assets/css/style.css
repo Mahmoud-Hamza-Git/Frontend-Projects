@@ -594,7 +594,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(80%);
+  transform: translateY(75%);
   color: #000;
   transition: all 500ms;
 }
@@ -603,15 +603,16 @@ header {
 }
 
 .p_head {
-  height: 20%;
+  height: 25%;
   background-color: var(--color1);
   color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2.2rem;
 }
 .p_desc_wrapper {
-  height: 80%;
+  height: 75%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
