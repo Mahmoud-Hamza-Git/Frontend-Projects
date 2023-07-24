@@ -12,6 +12,7 @@
 - you will find logout timer of 2 minutes if you didn't do an action you will logged out.
 - you can transfer money to the other accout by typing the user name and the ammout of transfer, then if you signed in to it you will find the transfered money.
 - you can sort your transactions and request a loan.
+- dealing with dates and local timezones & local money formats
 ![image](https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/assets/86957735/548355f6-4038-4493-bb91-44a5dd9d506d)
 
 
