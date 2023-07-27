@@ -2,7 +2,7 @@
   "fullstack": [
     {
       "name": "Your Notes 📝",
-      "desc": "A MEARN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
+      "desc": "A MERN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
       "img": "./assets/images/your_note.jpg",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/YourNotes-App",
       "demo_link": "https://yournotes-mahmoud-hamza-git.vercel.app/"
