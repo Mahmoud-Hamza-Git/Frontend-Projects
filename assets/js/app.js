@@ -6,7 +6,8 @@ const rightArrow = document.querySelector('.right_arrow');
 const leftArrow = document.querySelector('.left_arrow');
 const pagesWrapper = document.querySelector('.pages_wrapper');
 const skillsWrapper = document.querySelector('.skills_sec');
-const projectsWrapper = document.querySelector('.projects_sec');
+const projectsBox = document.querySelector('.p_box');
+const dotsContainer = document.querySelector('.p_circles');
 const pNavBtns = document.querySelectorAll('.p_nav_btn');
 let pagesElements;
 let slideIndex = 0;
@@ -24,7 +25,7 @@ closeNav.addEventListener('click', (e) => {
 
 // Typed
 var typed = new Typed('.typing', {
-  strings: ['Senior Computer Science Student', 'frontend developer', 'backend developer'],
+  strings: ['fresh graduate software engineer ', 'frontend developer', 'backend developer'],
   loop: true,
   typeSpeed: 50,
   backSpeed: 25,
@@ -92,31 +93,77 @@ main();
 ////////////////////
 
 // Later Apply Open Close principle
-function displayProjects(type = 'projects') {
-  fetchData(type).then((data) => {
+async function displayProjects(type = 'frontend') {
+  const data = await fetchData(type);
+  const dotsNumber = Math.ceil(data.length / 3);
+  createProjects(data, dotsNumber);
+
+  VanillaTilt.init([...document.querySelectorAll('.project')], {
+    max: 25,
+    speed: 400,
+  });
+
+  // initialy add active class to the first circle
+  document.querySelector('.p_circle').classList.add('active');
+  document.querySelector('.p_circles').addEventListener('click', handleDotsClicks);
+}
+
+// handle circles clicks
+function handleDotsClicks(e) {
+  if (e.target.classList.value == 'p_circle') {
+    // removes active class from all circles
+    [...dotsContainer.children].forEach((circle) => {
+      circle.classList.remove('active');
+    });
+    // only add active to clicked circle
+    e.target.classList.add('active');
+
+    const dotIndex = Array.prototype.indexOf.call(dotsContainer.children, e.target);
+
+    const projectsSections = document.querySelectorAll('.projects_sec');
+
+    projectsSections.forEach((sec) => {
+      sec.style.transform = `translateX(-${dotIndex * 100}%)`;
+    });
+  }
+}
+
+// create projects HTML
+function createProjects(data, dotsNumber) {
+  let boxesHTML = ``;
+  let dotsHTML = ``;
+  for (let j = 0; j < dotsNumber; j++) {
+    dotsHTML += `<div class="p_circle"></div>`;
+
     let projectsHTML = ``;
-    for (let i = 0; i < data.length; i++) {
-      projectsHTML += `
-      <div class="project" style="background-image: url('${data[i].img}');">
-        <div class="project_overlay">
-          <h2 class="p_head">${data[i].name}</h2>
-          <div class="p_desc_wrapper">
-            <p class="p_desc">${data[i].desc}</p>
-            <div class="p_btns">
-              <a href="${data[i].repo_link}" target="_blank" class="p_btn">repo</a>
-              <a href="${data[i].demo_link}" target="_blank" class="p_btn">demo</a>
+
+    for (let i = 0; i < 3; i++) {
+      if (!data[i + j * 3]) {
+        projectsHTML += `<div style="min-height:30rem"></div>`;
+      } else {
+        projectsHTML += `
+          <div class="project" style="background-image: url('${data[i + j * 3].img}');">
+            <div class="project_overlay">
+              <h2 class="p_head">${data[i + j * 3].name}</h2>
+              <div class="p_desc_wrapper">
+                <p class="p_desc">${data[i + j * 3].desc}</p>
+                <div class="p_btns">
+                  <a href="${data[i + j * 3].repo_link}" target="_blank" class="p_btn">repo</a>
+                  <a href="${data[i + j * 3].demo_link}" target="_blank" class="p_btn">demo</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      `;
+          `;
+      }
     }
-    projectsWrapper.innerHTML = projectsHTML;
-    VanillaTilt.init([...document.querySelectorAll('.project')], {
-      max: 25,
-      speed: 400,
-    });
-  });
+
+    let containerHTML = `<div class="projects_sec">${projectsHTML}</div>`;
+    boxesHTML += containerHTML;
+  }
+
+  projectsBox.innerHTML = boxesHTML;
+  dotsContainer.innerHTML = dotsHTML;
 }
 
 // Update projects if btns clicked

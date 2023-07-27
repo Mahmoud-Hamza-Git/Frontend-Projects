@@ -526,6 +526,8 @@ header {
   background-image: linear-gradient(var(--color5_3), 70%, var(--color5_1));
   color: #fff;
   gap: 2rem;
+  position: relative;
+  padding: 5rem 0 8rem 0;
 }
 
 .projects_wrapeer {
@@ -568,12 +570,22 @@ header {
   z-index: 1;
 }
 
-.projects_sec {
+.p_box {
   width: 100%;
+  display: flex;
+  overflow: hidden;
+  transition: all 10s;
+}
+
+.projects_sec {
+  min-width: 100%;
   display: grid;
   column-gap: 2rem;
   row-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
+  padding: 0 1px;
+  /* grid-templa-te-rows: 1fr 1fr; */
+  transition: all linear 500ms;
 }
 
 .project {
@@ -635,6 +647,27 @@ header {
   text-decoration: none;
   color: #fff;
   border-radius: 1rem;
+}
+
+.p_circles {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+}
+.p_circle {
+  background-color: var(--color8);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.p_circle.active {
+  border: 5px solid var(--color1);
 }
 /* Projects Sec End */
 

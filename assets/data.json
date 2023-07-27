@@ -1,18 +1,48 @@
 {
-  "projects": [
+  "fullstack": [
     {
-      "name": "Car Showroom",
-      "desc": "Landing page using react.",
+      "name": "Your Notes 📝",
+      "desc": "A MEARN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
+      "img": "./assets/images/your_note.jpg",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/YourNotes-App",
+      "demo_link": "https://yournotes-mahmoud-hamza-git.vercel.app/"
+    },
+    {
+      "name": "Task Manager ✅",
+      "desc": "task manager app using javavscript",
+      "img": "./assets/images/task_manager.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
+      "demo_link": "https://task-manager-54ug.onrender.com/"
+    },
+    {
+      "name": "To_Do ✍️",
+      "desc": "Todo list app using node, express, mongoDB, ejs render template",
+      "img": "./assets/images/to_do.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
+      "demo_link": "https://to-do-list-t4b9.onrender.com/"
+    }
+  ],
+  "frontend": [
+    {
+      "name": "Car Showroom 🚗",
+      "desc": "Landing page using react.js 🚕 (responsive - localstorage implementation - context_API)",
       "img": "./assets/images/car_showroom1.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
       "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
     },
     {
       "name": "Kalbonyan Board",
-      "desc": "Kanban Board using javascript.",
+      "desc": "Kanban Board using javascript. (Drag & Drop - Touch Screens compatiblity - permenant data using localstorage)",
       "img": "./assets/images/board_project3.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Kalbonyan_Board",
       "demo_link": "https://kalbonyan-board.netlify.app/"
+    },
+    {
+      "name": "Video Call App 🎥",
+      "desc": "Video Streeming app using Web Socket and WebRTC to make a peer to peer connection between to users (node.js - socket.io - webRTC)",
+      "img": "./assets/images/video_call.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
+      "demo_link": "https://video-call-app-usy7.onrender.com/"
     },
     {
       "name": "Appie",
@@ -21,20 +51,7 @@
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
       "demo_link": "https://appie-site1.netlify.app/"
     },
-    {
-      "name": "Video Call App",
-      "desc": "Video Streeming app using Web Socket and WebRTC to make a peer to peer connection between to users",
-      "img": "./assets/images/video_call.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
-      "demo_link": "https://video-call-app-usy7.onrender.com/"
-    },
-    {
-      "name": "Task Manager",
-      "desc": "task manager app using javavscript",
-      "img": "./assets/images/task_manager.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
-      "demo_link": "https://task-manager-54ug.onrender.com/"
-    },
+
     {
       "name": "Omnifood",
       "desc": "Omnifood app is landing page using HTML&CSS and JavaScript",
@@ -42,13 +59,7 @@
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
       "demo_link": "https://hamza-omnifood.netlify.app/"
     },
-    {
-      "name": "To_Do",
-      "desc": "Todo list app using node, express, mongoDB, ejs render template",
-      "img": "./assets/images/to_do.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
-      "demo_link": "https://to-do-list-t4b9.onrender.com/"
-    },
+
     {
       "name": "Admin Panel",
       "desc": "Admin Panel Using React, React Query, node.js, mongoDB. This Panel is under construction from my graduation project",
@@ -64,17 +75,10 @@
       "demo_link": "https://hamza-simon-game.netlify.app/"
     }
   ],
-  "others": [
+  "backend": [
     {
-      "name": "Your Notes(Upcomming..)",
-      "desc": "Notes app is a MEARN STACK based app using node.js, mongoDB and React.js",
-      "img": "./assets/images/your_note.jpg",
-      "repo_link": "#home",
-      "demo_link": "#home"
-    },
-    {
-      "name": "DiagnozeMe_Chat (Upcomming..)",
-      "desc": "My Graduation Project, A MERN Stack-based app",
+      "name": "DiagnozeMe_Chat API",
+      "desc": "Part of Backend of My Graduation Project, A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
       "img": "./assets/images/diagnoze_me.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
       "demo_link": "#home"
