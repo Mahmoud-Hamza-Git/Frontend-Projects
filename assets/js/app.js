@@ -288,7 +288,7 @@ function revealingScroll() {
     delay: 100,
   });
   ScrollReveal({ origin: 'bottom', distance: '30rem', duration: 2000, reset: true }).reveal(
-    '.skills_sec, .social_btn, .projects_sec',
+    '.skills_sec, .social_btn',
     { delay: 100 }
   );
 }

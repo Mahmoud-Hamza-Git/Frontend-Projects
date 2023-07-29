@@ -59,29 +59,49 @@
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
       "demo_link": "https://hamza-omnifood.netlify.app/"
     },
-
-    {
-      "name": "Admin Panel",
-      "desc": "Admin Panel Using React, React Query, node.js, mongoDB. This Panel is under construction from my graduation project",
-      "img": "./assets/images/admin_panel.png",
-      "repo_link": "https://github.com/Alaa-Ahmed-Elbasuony/Front-Project",
-      "demo_link": "#home"
-    },
     {
       "name": "Simon Game",
       "desc": "simon game using Jquery & Javascript",
       "img": "./assets/images/simon.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
       "demo_link": "https://hamza-simon-game.netlify.app/"
+    },
+    {
+      "name": "ATM Monitor💻",
+      "desc": "An application used to monitor your bank account status and make transfers or deposits, implemented usig HTML, CSS and Javascipt",
+      "img": "./assets/images/atm.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/ATM",
+      "demo_link": "https://atm-monitor.netlify.app/"
+    },
+    {
+      "name": "Dice Game🎲",
+      "desc": "A Game challenge between 2 players, implemented by HTML, CSS and JavaScript",
+      "img": "./assets/images/dice.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/dice_game",
+      "demo_link": "https://dice-game-challenge.netlify.app/"
+    },
+    {
+      "name": "Bankist💰",
+      "desc": "A Landing page contains lazy loading images, implemented by HTML, CSS and JavaScript",
+      "img": "./assets/images/bankist.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/bankist",
+      "demo_link": "https://bankist-app-page.netlify.app/"
     }
   ],
   "backend": [
     {
       "name": "DiagnozeMe_Chat API",
-      "desc": "Part of Backend of My Graduation Project, A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
+      "desc": "A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
       "img": "./assets/images/diagnoze_me.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
       "demo_link": "#home"
+    },
+    {
+      "name": "Newsletter📰",
+      "desc": "An api used to subscribe to newsletter mailing service on mailchimp, implemented using node.js      ",
+      "img": "./assets/images/newsletter.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/newsletter_api",
+      "demo_link": "https://newsletter-mailchimp-m95u.onrender.com"
     }
   ],
   "writings": [
@@ -173,6 +193,10 @@
       "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
     },
     {
+      "name": "Socket.io",
+      "icon": "./assets/images/socket.png"
+    },
+    {
       "name": "MaterialUI",
       "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
     },
@@ -195,10 +219,6 @@
     {
       "name": "Netlify",
       "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-      "name": "Socket.io",
-      "icon": "./assets/images/socket.png"
     }
   ]
 }
