@@ -1,224 +1,232 @@
 {
-  "fullstack": [
-    {
-      "name": "Your Notes 📝",
-      "desc": "A MERN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
-      "img": "./assets/images/your_note.jpg",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/YourNotes-App",
-      "demo_link": "https://yournotes-mahmoud-hamza-git.vercel.app/"
-    },
-    {
-      "name": "Task Manager ✅",
-      "desc": "task manager app using javavscript",
-      "img": "./assets/images/task_manager.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
-      "demo_link": "https://task-manager-54ug.onrender.com/"
-    },
-    {
-      "name": "To_Do ✍️",
-      "desc": "Todo list app using node, express, mongoDB, ejs render template",
-      "img": "./assets/images/to_do.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
-      "demo_link": "https://to-do-list-t4b9.onrender.com/"
-    }
-  ],
-  "frontend": [
-    {
-      "name": "Car Showroom 🚗",
-      "desc": "Landing page using react.js 🚕 (responsive - localstorage implementation - context_API)",
-      "img": "./assets/images/car_showroom1.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
-      "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
-    },
-    {
-      "name": "Kalbonyan Board",
-      "desc": "Kanban Board using javascript. (Drag & Drop - Touch Screens compatiblity - permenant data using localstorage)",
-      "img": "./assets/images/board_project3.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Kalbonyan_Board",
-      "demo_link": "https://kalbonyan-board.netlify.app/"
-    },
-    {
-      "name": "Video Call App 🎥",
-      "desc": "Video Streeming app using Web Socket and WebRTC to make a peer to peer connection between to users (node.js - socket.io - webRTC)",
-      "img": "./assets/images/video_call.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
-      "demo_link": "https://video-call-app-usy7.onrender.com/"
-    },
-    {
-      "name": "Appie",
-      "desc": "landing page using HTML & CSS",
-      "img": "./assets/images/appie_app.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
-      "demo_link": "https://appie-site1.netlify.app/"
-    },
+    "fullstack": [
+        {
+            "name": "Your Notes 📝",
+            "desc": "A MERN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
+            "img": "./assets/images/your_note.jpg",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/YourNotes-App",
+            "demo_link": "https://yournotes-mahmoud-hamza-git.vercel.app/"
+        },
+        {
+            "name": "Snappy - Chat Application💬",
+            "desc": "A Real time chat application 💬 using react.js, node.js, express, socket.io and mongoDB",
+            "img": "./assets/images/snappy-chat.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/realtime-chatapp",
+            "demo_link": "https://snapy-app.onrender.com/"
+        },
+        {
+            "name": "To_Do ✍️",
+            "desc": "Todo list app using node, express, mongoDB, ejs render template",
+            "img": "./assets/images/to_do.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
+            "demo_link": "https://to-do-list-t4b9.onrender.com/"
+        },
+        {
+            "name": "Task Manager ✅",
+            "desc": "task manager app using javavscript",
+            "img": "./assets/images/task_manager.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
+            "demo_link": "https://task-manager-54ug.onrender.com/"
+        }
+    ],
+    "frontend": [
+        {
+            "name": "Car Showroom 🚗",
+            "desc": "Adaptive Landing page using react.js 🚕 (responsive - localstorage implementation - context_API)",
+            "img": "./assets/images/car_showroom1.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
+            "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
+        },
+        {
+            "name": "Kalbonyan Board",
+            "desc": "Kanban Board using javascript. (Drag & Drop🎯 - Touch Screens compatiblity🤳 - permenant data using localstorage)",
+            "img": "./assets/images/board_project3.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Kalbonyan_Board",
+            "demo_link": "https://kalbonyan-board.netlify.app/"
+        },
+        {
+            "name": "Video Call App 🎥",
+            "desc": "Video Streeming app 💻 using Web Socket and WebRTC to make a peer to peer connection between to users (node.js - socket.io - webRTC)",
+            "img": "./assets/images/video_call.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
+            "demo_link": "https://video-call-app-usy7.onrender.com/"
+        },
+        {
+            "name": "Appie",
+            "desc": "Adaptive landing page using HTML & CSS",
+            "img": "./assets/images/appie_app.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
+            "demo_link": "https://appie-site1.netlify.app/"
+        },
 
-    {
-      "name": "Omnifood",
-      "desc": "Omnifood app is landing page using HTML&CSS and JavaScript",
-      "img": "./assets/images/omnifood.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
-      "demo_link": "https://hamza-omnifood.netlify.app/"
-    },
-    {
-      "name": "Simon Game",
-      "desc": "simon game using Jquery & Javascript",
-      "img": "./assets/images/simon.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
-      "demo_link": "https://hamza-simon-game.netlify.app/"
-    },
-    {
-      "name": "ATM Monitor💻",
-      "desc": "An application used to monitor your bank account status and make transfers or deposits, implemented usig HTML, CSS and Javascipt",
-      "img": "./assets/images/atm.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/ATM",
-      "demo_link": "https://atm-monitor.netlify.app/"
-    },
-    {
-      "name": "Dice Game🎲",
-      "desc": "A Game challenge between 2 players, implemented by HTML, CSS and JavaScript",
-      "img": "./assets/images/dice.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/dice_game",
-      "demo_link": "https://dice-game-challenge.netlify.app/"
-    },
-    {
-      "name": "Bankist💰",
-      "desc": "A Landing page contains lazy loading images, implemented by HTML, CSS and JavaScript",
-      "img": "./assets/images/bankist.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/bankist",
-      "demo_link": "https://bankist-app-page.netlify.app/"
-    }
-  ],
-  "backend": [
-    {
-      "name": "DiagnozeMe_Chat API",
-      "desc": "A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
-      "img": "./assets/images/diagnoze_me.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
-      "demo_link": "#home"
-    },
-    {
-      "name": "Newsletter📰",
-      "desc": "An api used to subscribe to newsletter mailing service on mailchimp, implemented using node.js      ",
-      "img": "./assets/images/newsletter.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/newsletter_api",
-      "demo_link": "https://newsletter-mailchimp-m95u.onrender.com"
-    }
-  ],
-  "writings": [
-    {
-      "name": "MongoDB",
-      "link": "https://adorable-soil-62a.notion.site/MongoDB-85a8de630d4c4e709925f15d4b50d2c0?pvs=4"
-    },
-    {
-      "name": "SOLID Principles & Design Patterns",
-      "link": "https://adorable-soil-62a.notion.site/Solid-Principles-Design-Patterns-1ca2e66e914f4539b1d0678925681476?pvs=4"
-    },
-    {
-      "name": "Web Sockets",
-      "link": "https://adorable-soil-62a.notion.site/section-18-Web-Sockets-8ea2c373803f479ab8770fedcd27cecf?pvs=4"
-    },
-    {
-      "name": "Network",
-      "link": "https://adorable-soil-62a.notion.site/Network-f10237cac7714ec4a2c0380403459702?pvs=4"
-    },
-    {
-      "name": "JavaScript",
-      "link": "https://adorable-soil-62a.notion.site/JavaScript-Course-John-Shmeditman-c9e578bea345471699510bef5187afd1?pvs=4"
-    },
-    {
-      "name": "Problem Solving",
-      "link": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhCxPM5c_YgtAO3TbZ6bCJ796ejuzUr5v1KAu22LWAqK_SBvgnNcS5suf6tU0u1uvipGW_qEah578a/pubhtml?gid=2048114333&single=true"
-    },
-    {
-      "name": "React",
-      "link": "https://adorable-soil-62a.notion.site/Full-Course-Maximilian-3df33f032a1245c4bd6eedd95ac7cccd?pvs=4"
-    },
-    {
-      "name": "React Query",
-      "link": "https://adorable-soil-62a.notion.site/React-query-Tanstack-Query-0374ddf5fbc44ece98de8e3b2c864ab4?pvs=4"
-    },
-    {
-      "name": "Git & Github",
-      "link": "https://adorable-soil-62a.notion.site/Git-GitHub-ef336c372cd34e75840533e46665895d?pvs=4"
-    },
-    {
-      "name": "Information Security",
-      "link": "https://adorable-soil-62a.notion.site/Information-Security-28dfac994c754c048630b76725fd7193?pvs=4"
-    }
-  ],
-  "skills": [
-    {
-      "name": "ReactJS",
-      "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-      "name": "ExpressJS",
-      "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
-    },
-    {
-      "name": "NodeJS",
-      "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
-    },
-    {
-      "name": "JavaScript",
-      "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    { "name": "Docker", "icon": "https://img.icons8.com/fluency/48/docker.png" },
-    {
-      "name": "React Query",
-      "icon": "./assets/images/reactQuery.svg"
-    },
-    {
-      "name": "HTML5",
-      "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-      "name": "CSS3",
-      "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-      "name": "Git VCS",
-      "icon": "https://img.icons8.com/color/48/000000/git.png"
-    },
-    {
-      "name": "Redux",
-      "icon": "https://img.icons8.com/color/48/000000/redux.png"
-    },
-    {
-      "name": "GitHub",
-      "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-      "name": "MongoDB",
-      "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-      "name": "Socket.io",
-      "icon": "./assets/images/socket.png"
-    },
-    {
-      "name": "MaterialUI",
-      "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
-    },
-    {
-      "name": "Bootstrap",
-      "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-      "name": "C++",
-      "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-      "name": "Render",
-      "icon": "./assets/images/render.webp"
-    },
-    {
-      "name": "Vercel",
-      "icon": "./assets/images/vercel.png"
-    },
-    {
-      "name": "Netlify",
-      "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    }
-  ]
+        {
+            "name": "Omnifood",
+            "desc": "Omnifood app is landing page using HTML&CSS and JavaScript",
+            "img": "./assets/images/omnifood.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
+            "demo_link": "https://hamza-omnifood.netlify.app/"
+        },
+        {
+            "name": "Simon Game",
+            "desc": "simon game using Jquery & Javascript",
+            "img": "./assets/images/simon.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
+            "demo_link": "https://hamza-simon-game.netlify.app/"
+        },
+        {
+            "name": "ATM Monitor💻",
+            "desc": "An application used to monitor your bank account status and make transfers or deposits, implemented usig HTML, CSS and Javascipt",
+            "img": "./assets/images/atm.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/ATM",
+            "demo_link": "https://atm-monitor.netlify.app/"
+        },
+        {
+            "name": "Dice Game🎲",
+            "desc": "A Game challenge between 2 players, implemented by HTML, CSS and JavaScript",
+            "img": "./assets/images/dice.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/dice_game",
+            "demo_link": "https://dice-game-challenge.netlify.app/"
+        },
+        {
+            "name": "Bankist💰",
+            "desc": "A Landing page contains lazy loading images, implemented by HTML, CSS and JavaScript",
+            "img": "./assets/images/bankist.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/bankist",
+            "demo_link": "https://bankist-app-page.netlify.app/"
+        }
+    ],
+    "backend": [
+        {
+            "name": "DiagnozeMe_Chat API",
+            "desc": "A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
+            "img": "./assets/images/diagnoze_me.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
+            "demo_link": "#home"
+        },
+        {
+            "name": "Newsletter📰",
+            "desc": "An api used to subscribe to newsletter mailing service on mailchimp, implemented using node.js      ",
+            "img": "./assets/images/newsletter.png",
+            "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/newsletter_api",
+            "demo_link": "https://newsletter-mailchimp-m95u.onrender.com"
+        }
+    ],
+    "writings": [
+        {
+            "name": "MongoDB",
+            "link": "https://adorable-soil-62a.notion.site/MongoDB-85a8de630d4c4e709925f15d4b50d2c0?pvs=4"
+        },
+        {
+            "name": "SOLID Principles & Design Patterns",
+            "link": "https://adorable-soil-62a.notion.site/Solid-Principles-Design-Patterns-1ca2e66e914f4539b1d0678925681476?pvs=4"
+        },
+        {
+            "name": "Web Sockets",
+            "link": "https://adorable-soil-62a.notion.site/section-18-Web-Sockets-8ea2c373803f479ab8770fedcd27cecf?pvs=4"
+        },
+        {
+            "name": "Network",
+            "link": "https://adorable-soil-62a.notion.site/Network-f10237cac7714ec4a2c0380403459702?pvs=4"
+        },
+        {
+            "name": "JavaScript",
+            "link": "https://adorable-soil-62a.notion.site/JavaScript-Course-John-Shmeditman-c9e578bea345471699510bef5187afd1?pvs=4"
+        },
+        {
+            "name": "Problem Solving",
+            "link": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhCxPM5c_YgtAO3TbZ6bCJ796ejuzUr5v1KAu22LWAqK_SBvgnNcS5suf6tU0u1uvipGW_qEah578a/pubhtml?gid=2048114333&single=true"
+        },
+        {
+            "name": "React",
+            "link": "https://adorable-soil-62a.notion.site/Full-Course-Maximilian-3df33f032a1245c4bd6eedd95ac7cccd?pvs=4"
+        },
+        {
+            "name": "React Query",
+            "link": "https://adorable-soil-62a.notion.site/React-query-Tanstack-Query-0374ddf5fbc44ece98de8e3b2c864ab4?pvs=4"
+        },
+        {
+            "name": "Git & Github",
+            "link": "https://adorable-soil-62a.notion.site/Git-GitHub-ef336c372cd34e75840533e46665895d?pvs=4"
+        },
+        {
+            "name": "Information Security",
+            "link": "https://adorable-soil-62a.notion.site/Information-Security-28dfac994c754c048630b76725fd7193?pvs=4"
+        }
+    ],
+    "skills": [
+        {
+            "name": "ReactJS",
+            "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+        },
+        {
+            "name": "React Query",
+            "icon": "./assets/images/reactQuery.svg"
+        },
+        {
+            "name": "Redux",
+            "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+        },
+        {
+            "name": "HTML5",
+            "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+        },
+        {
+            "name": "CSS3",
+            "icon": "https://img.icons8.com/color/48/000000/css3.png"
+        },
+        {
+            "name": "styled-components",
+            "icon": "https://img.icons8.com/color/48/000000/styled-components.png"
+        },
+        {
+            "name": "Sass",
+            "icon": "https://img.icons8.com/color/48/000000/sass.png"
+        },
+        {
+            "name": "ExpressJS",
+            "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        },
+        {
+            "name": "NodeJS",
+            "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        },
+        {
+            "name": "Git VCS",
+            "icon": "https://img.icons8.com/color/48/000000/git.png"
+        },
+        {
+            "name": "GitHub",
+            "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+        },
+        {
+            "name": "MongoDB",
+            "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+        },
+        {
+            "name": "Socket.io",
+            "icon": "./assets/images/socket.png"
+        },
+        { "name": "Docker", "icon": "https://img.icons8.com/fluency/48/docker.png" },
+
+        {
+            "name": "Bootstrap",
+            "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+        },
+        {
+            "name": "C++",
+            "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+        },
+        {
+            "name": "Render",
+            "icon": "./assets/images/render.webp"
+        },
+        {
+            "name": "Netlify",
+            "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
+        }
+    ]
 }
