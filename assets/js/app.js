@@ -1,300 +1,382 @@
-// GLOBALS
-const burger = document.querySelector('.burger');
-const closeNav = document.querySelector('.nav_close');
-const nav = document.querySelector('.nav');
-const rightArrow = document.querySelector('.right_arrow');
-const leftArrow = document.querySelector('.left_arrow');
-const pagesWrapper = document.querySelector('.pages_wrapper');
-const skillsWrapper = document.querySelector('.skills_sec');
-const projectsBox = document.querySelector('.p_box');
-const dotsContainer = document.querySelector('.p_circles');
-const pNavBtns = document.querySelectorAll('.p_nav_btn');
-let pagesElements;
-let slideIndex = 0;
-let slidesNum;
-let maxSlides;
+const burger = document.querySelector(".burger");
+const closeNav = document.querySelector(".nav_close");
+const nav = document.querySelector(".nav");
+const navItems = document.querySelectorAll(".nav_item");
+let dataCache = null;
 
-// NavBar
-burger.addEventListener('click', (e) => {
-  nav.classList.toggle('active');
-});
+initNav();
+highlightActiveNav();
+initSmoothScroll();
+initTypingEffect();
+initProfileTilt();
 
-closeNav.addEventListener('click', (e) => {
-  nav.classList.remove('active');
-});
-
-// Typed
-var typed = new Typed('.typing', {
-  strings: ['fresh graduate software engineer ', 'frontend developer', 'backend developer'],
-  loop: true,
-  typeSpeed: 50,
-  backSpeed: 25,
-  backDelay: 800,
-});
-
-// Smooth Scrolling (using event delegation)
-// const navList = document.querySelector('.nav_list');
-// navList.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   window.scrollTo({
-//     top: document.querySelector(`${e.target.attributes?.href.value}`).offsetTop - 79,
-//     left: 100,
-//     behavior: 'smooth',
-//   });
-// });
-
-// Smooth Scrolling
-const links = document.querySelectorAll('a[href*="#"]');
-links.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault(); //don't forget it
-    window.scrollTo({
-      top: document.querySelector(`${link.attributes?.href?.value}`).offsetTop - 79,
-      left: 10,
-      behavior: 'smooth',
-    });
-  });
-});
-
-// Tints
-VanillaTilt.init(document.querySelector('.personal_img'), {
-  max: 25,
-  speed: 400,
-});
-
-//////////////////////////////
-// ADDING CONTENT TO THE PAGE
-//////////////////////////////
-async function main() {
-  displayProjects();
-
-  // Litening to update projects
-  updateProjects();
-
-  // Adding Skills
-  addingSkills();
-
-  // Adding Writing Pages
-  await addingPages();
-
-  // Listening to window resizing and initiate sliding variables
-  resizingSlides();
-
-  // Activate Sliding pages
-  startSliding();
-
-  /*  SCROLL REVEAL ANIMATION  */
-  revealingScroll(); // put it at the end as it some bugs may happens if some elements delayed to render
-}
 main();
 
-////////////////////
-// FUNCTIONS
-////////////////////
+async function main() {
+  await Promise.all([renderSkills(), initProjectsPage(), initBlogPage()]);
+  initScrollReveal();
+}
 
-// Later Apply Open Close principle
-async function displayProjects(type = 'frontend') {
-  const data = await fetchData(type);
-  const dotsNumber = Math.ceil(data.length / 3);
-  createProjects(data, dotsNumber);
+function initNav() {
+  if (!burger || !nav || !closeNav) return;
 
-  VanillaTilt.init([...document.querySelectorAll('.project')], {
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  closeNav.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+}
+
+function highlightActiveNav() {
+  if (!navItems.length) return;
+  const currentPage = document.body?.dataset?.page;
+  if (!currentPage) return;
+
+  navItems.forEach((item) => {
+    const isActive = item.dataset.nav === currentPage;
+    item.classList.toggle("active", isActive);
+  });
+}
+
+function initSmoothScroll() {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  anchorLinks.forEach((link) => {
+    const targetId = link.getAttribute("href");
+    if (!targetId || targetId.length <= 1) return;
+
+    link.addEventListener("click", (event) => {
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+      const offset = target.getBoundingClientRect().top + window.pageYOffset - 79;
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+      });
+    });
+  });
+}
+
+function initTypingEffect() {
+  const typingTarget = document.querySelector(".typing");
+  if (!typingTarget || typeof Typed === "undefined") return;
+
+  new Typed(".typing", {
+    strings: ["full-stack MERN developer", "product-focused engineer", "technical team collaborator"],
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 900,
+  });
+}
+
+function initProfileTilt() {
+  const profileImage = document.querySelector(".personal_img");
+  if (!profileImage || typeof VanillaTilt === "undefined") return;
+
+  VanillaTilt.init(profileImage, {
     max: 25,
     speed: 400,
   });
-
-  // initialy add active class to the first circle
-  document.querySelector('.p_circle').classList.add('active');
-  document.querySelector('.p_circles').addEventListener('click', handleDotsClicks);
 }
 
-// handle circles clicks
-function handleDotsClicks(e) {
-  if (e.target.classList.value == 'p_circle') {
-    // removes active class from all circles
-    [...dotsContainer.children].forEach((circle) => {
-      circle.classList.remove('active');
-    });
-    // only add active to clicked circle
-    e.target.classList.add('active');
+async function loadData() {
+  if (dataCache) return dataCache;
 
-    const dotIndex = Array.prototype.indexOf.call(dotsContainer.children, e.target);
-
-    const projectsSections = document.querySelectorAll('.projects_sec');
-
-    projectsSections.forEach((sec) => {
-      sec.style.transform = `translateX(-${dotIndex * 100}%)`;
-    });
-  }
-}
-
-// create projects HTML
-function createProjects(data, dotsNumber) {
-  let boxesHTML = ``;
-  let dotsHTML = ``;
-  for (let j = 0; j < dotsNumber; j++) {
-    dotsHTML += `<div class="p_circle"></div>`;
-
-    let projectsHTML = ``;
-
-    for (let i = 0; i < 3; i++) {
-      if (!data[i + j * 3]) {
-        projectsHTML += `<div style="min-height:30rem"></div>`;
-      } else {
-        projectsHTML += `
-          <div class="project" style="background-image: url('${data[i + j * 3].img}');">
-            <div class="project_overlay">
-              <h2 class="p_head">${data[i + j * 3].name}</h2>
-              <div class="p_desc_wrapper">
-                <p class="p_desc">${data[i + j * 3].desc}</p>
-                <div class="p_btns">
-                  <a href="${data[i + j * 3].repo_link}" target="_blank" class="p_btn">repo</a>
-                  <a href="${data[i + j * 3].demo_link}" target="_blank" class="p_btn">demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          `;
-      }
-    }
-
-    let containerHTML = `<div class="projects_sec">${projectsHTML}</div>`;
-    boxesHTML += containerHTML;
+  try {
+    const response = await fetch("./assets/data.json");
+    dataCache = await response.json();
+  } catch (error) {
+    console.error("Failed to load portfolio data.", error);
+    dataCache = {};
   }
 
-  projectsBox.innerHTML = boxesHTML;
-  dotsContainer.innerHTML = dotsHTML;
+  return dataCache;
 }
 
-// Update projects if btns clicked
-function updateProjects() {
-  pNavBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      // DeActivate not targeted buttons
-      pNavBtns.forEach((button) => {
-        button.classList.remove('active');
-        button.disabled = false;
-      });
+async function renderSkills() {
+  const skillsWrapper = document.querySelector(".skills_sec");
+  if (!skillsWrapper) return;
 
-      // Activate Targeted button
-      e.target.classList.add('active');
-      e.target.disabled = true;
+  const data = await loadData();
+  const skills = data?.skills ?? [];
 
-      // Update the Displayed content
-      const type = e.target.textContent.trim().toLowerCase();
-      displayProjects(type);
-    });
-  });
-}
+  if (!skills.length) {
+    skillsWrapper.innerHTML = '<p class="skills_empty">Skill stack showcase will be refreshed shortly.</p>';
+    return;
+  }
 
-// ADDING PAGES
-async function addingPages() {
-  await fetchData('writings').then((data) => {
-    slidesNum = data.length;
-    maxSlides = slidesNum - 4;
-    let pagesHTML = ``;
-    for (let i = 0; i < data.length; i++) {
-      pagesHTML += `
-      <li class="page">
-        <a target="_blank" href="${data[i].link}">
-          <i class="fa-solid fa-book-open-reader"></i>
-          <p>${data[i].name}</p>
-        </a>
-      </li>
-    `;
-    }
-    pagesWrapper.innerHTML = pagesHTML;
-    pagesElements = document.querySelectorAll('.page');
-  });
-}
-
-// Changing maxSlides when resizing
-function resizingSlides() {
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 870) {
-      maxSlides = slidesNum - 4;
-    } else if (window.innerWidth <= 1000 && window.innerWidth > 550) {
-      maxSlides = slidesNum - 2;
-    } else if (window.innerWidth <= 550) {
-      maxSlides = slidesNum - 1;
-    }
-  });
-}
-
-// 0 1 2 (zero and 2 steps) --> all steps is moving in the negative direction
-function startSliding() {
-  rightArrow.addEventListener('click', () => {
-    slideIndex++;
-    if (slideIndex <= maxSlides) {
-      // move
-      pagesElements.forEach((page) => {
-        page.style.transform = `translateX(-${slideIndex * 100}%)`;
-      });
-      // enable the other button & disable this button if reaches the end
-      if (slideIndex == 1) leftArrow.classList.remove('disabled');
-      if (slideIndex == maxSlides) rightArrow.classList.add('disabled');
-    } else {
-      // keep the index not change on the maxslide
-      slideIndex--;
-      // disable the button
-      rightArrow.classList.add('disabled');
-    }
-  });
-
-  leftArrow.addEventListener('click', () => {
-    slideIndex--;
-    if (slideIndex >= 0) {
-      // move
-      pagesElements.forEach((page) => {
-        page.style.transform = `translateX(-${slideIndex * 100}%)`;
-      });
-      // enable the other button & disable my this button if reaches the end
-      rightArrow.classList.remove('disabled');
-      if (slideIndex == 0) leftArrow.classList.add('disabled');
-    } else {
-      // keep the index not change on the starting slide
-      slideIndex++;
-      // disable the button
-      leftArrow.classList.add('disabled');
-    }
-  });
-}
-
-// adding skills
-function addingSkills() {
-  fetchData('skills').then((data) => {
-    let skillsHTML = ``;
-    for (let i = 0; i < data.length; i++) {
-      skillsHTML += `
+  const skillsHTML = skills
+    .map(
+      (skill) => `
         <div class="skill">
           <div class="skill_content">
-            <img class="skill_img" src="${data[i].icon}" alt="" />
-            <p class="skill_name">${data[i].name}</p>
+            <img class="skill_img" src="${skill.icon}" alt="${skill.name}" loading="lazy" />
+            <p class="skill_name">${skill.name}</p>
           </div>
         </div>
-      `;
+      `
+    )
+    .join("");
+
+  skillsWrapper.innerHTML = skillsHTML;
+}
+
+async function initProjectsPage() {
+  const projectsGrid = document.querySelector(".projects_grid");
+  if (!projectsGrid) return;
+
+  const searchInput = document.getElementById("projectSearch");
+  const filterButtons = document.querySelectorAll(".project_filter");
+  const data = await loadData();
+
+  const typedProjects = buildProjectsCollection(data);
+
+  let activeType = "all";
+  let searchTerm = "";
+
+  function applyFilters() {
+    const filtered = typedProjects.filter((project) => {
+      const matchesType = activeType === "all" || project.type === activeType;
+      if (!matchesType) return false;
+
+      if (!searchTerm) return true;
+
+      const haystack = `${project.name} ${project.type}`.toLowerCase();
+      return haystack.includes(searchTerm);
+    });
+
+    renderProjects(filtered);
+  }
+
+  function renderProjects(projects) {
+    if (!projects.length) {
+      projectsGrid.innerHTML = `<div class="projects_empty">No projects match your filters just yet. Try a different keyword or type.</div>`;
+      return;
     }
-    skillsWrapper.innerHTML = skillsHTML;
+
+    const cards = projects
+      .map((project) => {
+        const demoIsInternal = project.demo_link?.startsWith("#");
+        const demoTarget = demoIsInternal ? "_self" : "_blank";
+        const demoRel = demoIsInternal ? "" : ' rel="noopener noreferrer"';
+
+        return `
+          <article class="project_card" data-type="${project.type}">
+            <div class="project_media">
+              <img src="${project.img}" alt="${project.name} preview" loading="lazy" />
+            </div>
+            <div class="project_body">
+              <div class="project_header">
+                <span class="project_type project_type--${project.type}">${project.typeLabel}</span>
+                <h3>${project.name}</h3>
+              </div>
+              <p>${project.desc}</p>
+            </div>
+            <div class="project_actions">
+              <a href="${project.repo_link}" target="_blank" rel="noopener noreferrer">Repo</a>
+              <a href="${project.demo_link}" target="${demoTarget}"${demoRel}>Live</a>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+    projectsGrid.innerHTML = cards;
+
+    if (typeof VanillaTilt !== "undefined") {
+      VanillaTilt.init(projectsGrid.querySelectorAll(".project_card"), {
+        max: 12,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.15,
+      });
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (event) => {
+      searchTerm = event.target.value.trim().toLowerCase();
+      applyFilters();
+    });
+  }
+
+  filterButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", button.classList.contains("active") ? "true" : "false");
+
+    button.addEventListener("click", () => {
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-pressed", "false");
+      });
+
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
+      activeType = button.dataset.type ?? "all";
+      applyFilters();
+    });
   });
+
+  applyFilters();
 }
 
-/* SCROLL REVEAL ANIMATION  */
-function revealingScroll() {
-  ScrollReveal({ origin: 'left', distance: '30rem', duration: 2000, reset: true }).reveal(
-    '.main_img, .main_content, .writings',
-    { delay: 100 }
-  );
-  ScrollReveal({ origin: 'right', distance: '30rem', duration: 2000, reset: true }).reveal('.edu_card', {
-    delay: 100,
+function buildProjectsCollection(data) {
+  if (!data) return [];
+
+  const typeLabels = {
+    fullstack: "Fullstack",
+    frontend: "Frontend",
+    backend: "Backend",
+  };
+
+  const groups = ["fullstack", "frontend", "backend"];
+
+  const projects = groups.flatMap((type) => {
+    const items = data?.[type] ?? [];
+    return items.map((project) => ({
+      ...project,
+      type,
+      typeLabel: typeLabels[type] ?? type,
+    }));
   });
-  ScrollReveal({ origin: 'bottom', distance: '30rem', duration: 2000, reset: true }).reveal(
-    '.skills_sec, .social_btn',
-    { delay: 100 }
-  );
+
+  return projects;
 }
 
-async function fetchData(type) {
-  const res = await fetch('./assets/data.json');
-  const data = await res.json();
-  return data[type];
+async function initBlogPage() {
+  const blogGrid = document.querySelector(".blog_grid");
+  if (!blogGrid) return;
+
+  const data = await loadData();
+  const writings = data?.writings ?? [];
+
+  if (!writings.length) {
+    blogGrid.innerHTML = `<div class="blog_empty">Stay tuned—new articles and study notes are on their way.</div>`;
+    return;
+  }
+
+  const cards = writings
+    .map((entry) => {
+      const summary = getWritingSummary(entry.name);
+      return `
+        <article class="blog_card">
+          <h3>${entry.name}</h3>
+          <p>${summary}</p>
+          <a href="${entry.link}" target="_blank" rel="noopener noreferrer">Read now <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+      `;
+    })
+    .join("");
+
+  blogGrid.innerHTML = cards;
+}
+
+function getWritingSummary(name = "") {
+  const mappings = [
+    {
+      match: /mongo/i,
+      text: "Schema design decisions, aggregation pipelines, and indexing tactics for scalable data.",
+    },
+    {
+      match: /solid|design/i,
+      text: "Principles and patterns that keep large JavaScript and Node codebases maintainable.",
+    },
+    {
+      match: /socket/i,
+      text: "Real-time communication patterns, socket lifecycle, and deployment-ready examples.",
+    },
+    {
+      match: /network/i,
+      text: "Fundamental layers, protocols, and debugging techniques for dependable networking.",
+    },
+    {
+      match: /javascript/i,
+      text: "Core language notes covering modern syntax, patterns, and performance gotchas.",
+    },
+    {
+      match: /react query/i,
+      text: "State synchronization, caching strategies, and background updates with React Query.",
+    },
+    { match: /git/i, text: "Commit workflows, branching models, and collaborative Git tactics for teams." },
+    {
+      match: /security/i,
+      text: "Practical information security checklist, threat modeling, and mitigation strategies.",
+    },
+  ];
+
+  const mapping = mappings.find((item) => item.match.test(name));
+  return mapping
+    ? mapping.text
+    : `Notebook recap covering ${name} essentials and the key takeaways I apply in projects.`;
+}
+
+function initScrollReveal() {
+  if (typeof ScrollReveal === "undefined") return;
+
+  const hasHomeHero = document.querySelector(".main_content");
+  if (hasHomeHero) {
+    ScrollReveal({ origin: "left", distance: "30rem", duration: 2000, reset: true }).reveal(
+      ".main_img, .main_content",
+      { delay: 100 }
+    );
+
+    ScrollReveal({ origin: "bottom", distance: "30rem", duration: 2000, reset: true }).reveal(
+      ".gateway_card",
+      { interval: 120 }
+    );
+  }
+
+  if (document.querySelector(".about_sec")) {
+    ScrollReveal({ origin: "left", distance: "30rem", duration: 2000, reset: true }).reveal(".about_sec", {
+      delay: 150,
+    });
+  }
+
+  if (document.querySelector(".skills_sec")) {
+    ScrollReveal({ origin: "bottom", distance: "25rem", duration: 2000, reset: true }).reveal(".skill", {
+      interval: 80,
+    });
+  }
+
+  if (document.querySelector(".edu_card")) {
+    ScrollReveal({ origin: "right", distance: "30rem", duration: 2000, reset: true }).reveal(".edu_card", {
+      delay: 120,
+    });
+  }
+
+  if (document.querySelector(".projects_grid")) {
+    ScrollReveal({ origin: "bottom", distance: "25rem", duration: 2000, reset: true }).reveal(
+      ".project_card",
+      {
+        interval: 120,
+      }
+    );
+  }
+
+  if (document.querySelector(".blog_grid")) {
+    ScrollReveal({ origin: "bottom", distance: "25rem", duration: 2000, reset: true }).reveal(".blog_card", {
+      interval: 100,
+    });
+  }
+
+  if (document.querySelector(".timeline_item")) {
+    ScrollReveal({ origin: "bottom", distance: "20rem", duration: 1800, reset: true }).reveal(
+      ".timeline_item",
+      {
+        interval: 120,
+        beforeReveal: (el) => el.classList.add("is-visible"),
+        beforeReset: (el) => el.classList.remove("is-visible"),
+      }
+    );
+  }
 }

@@ -1,12 +1,17 @@
 // Some random colors
-const colors = ['#309a46', '#196499', '#000', '#ca960c', '#c92a2a'];
+const colors = ["#309a46", "#196499", "#000", "#ca960c", "#c92a2a"];
 
 const numBalls = 100;
 const balls = [];
+const dotsContainer = document.querySelector(".random-dots");
+
+if (!dotsContainer) {
+  return;
+}
 
 for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement('div');
-  ball.classList.add('ball');
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
   ball.style.left = `${Math.floor(Math.random() * 100)}%`;
   ball.style.top = `${Math.floor(Math.random() * 100)}%`;
@@ -15,11 +20,11 @@ for (let i = 0; i < numBalls; i++) {
   ball.style.height = ball.style.width;
 
   balls.push(ball);
-  document.querySelector('.random-dots').appendChild(ball);
+  dotsContainer.appendChild(ball);
 }
 
 // Keyframes
-balls.forEach((el, i) => {
+balls.forEach((el) => {
   let to = {
     x: Math.round(Math.random() * 12),
     y: Math.round(Math.random() * 12),
@@ -37,10 +42,10 @@ balls.forEach((el, i) => {
 
     {
       duration: (Math.random() + 1) * 3000, // random duration  // timing
-      direction: 'alternate',
-      fill: 'both',
+      direction: "alternate",
+      fill: "both",
       iterations: Infinity,
-      easing: 'linear',
+      easing: "linear",
     }
   );
 });

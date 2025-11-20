@@ -14,9 +14,9 @@
       rel="stylesheet" />
     <script src="https://kit.fontawesome.com/de1af96c6d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Mahmoud Hamza | Portfolio</title>
+    <title>Blog | Mahmoud Hamza</title>
   </head>
-  <body data-page="home">
+  <body data-page="blog">
     <header>
       <nav class="nav">
         <div class="list_container">
@@ -40,55 +40,20 @@
       </nav>
     </header>
 
-    <section class="main" id="home">
-      <div class="random-dots"><div class="dots_overlay"></div></div>
-      <div class="main_sec">
-        <div class="side main_img center_v">
-          <img class="personal_img" src="./assets/images/hamza.jpg" alt="Hamza image" />
-        </div>
-        <div class="content_wrapper center_v">
-          <div class="side main_content">
-            <h2>
-              Hi There,<br />
-              I'm Mahmoud <span>Hamza</span>
-            </h2>
-            <p>I am a <span class="typing"></span></p>
-            <div class="hero_cta">
-              <a class="primary_btn" href="projects.html">View Projects</a>
-              <a class="secondary_btn" href="blog.html">Read Blog</a>
-            </div>
-          </div>
-        </div>
+    <section class="page_heading">
+      <div class="page_heading_inner">
+        <h1>Blog &amp; Notes</h1>
+        <p>Reflections, study notes, and resources captured while building full-stack products.</p>
       </div>
     </section>
 
-    <section class="home_gateway sec-wrapper">
-      <h2 class="sec_title gateway_title"><i class="fa-solid fa-compass"></i>Explore <span>More</span></h2>
-      <div class="gateway_container">
-        <article class="gateway_card">
-          <h3>About &amp; Skills</h3>
-          <p>Learn the story, stack, and values that shape every solution I build.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="about.html">About</a>
-            <a class="gateway_link gateway_link--ghost" href="skills.html">Skills</a>
-          </div>
-        </article>
-        <article class="gateway_card">
-          <h3>Experience Timeline</h3>
-          <p>Trace military service, internships, and freelance wins across a single roadmap.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="experience.html">View Timeline</a>
-          </div>
-        </article>
-        <article class="gateway_card">
-          <h3>Projects &amp; Writing</h3>
-          <p>Review production-grade case studies and blog notes from the learning journey.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="projects.html">All Projects</a>
-            <a class="gateway_link gateway_link--ghost" href="blog.html">Blog</a>
-          </div>
-        </article>
-      </div>
+    <section class="blog sec-wrapper">
+      <h2 class="sec_title blog_sec_title"><i class="fa-solid fa-pen-nib"></i>Knowledge <span>Hub</span></h2>
+      <p class="blog_intro">
+        Browse my learning library—summaries, deep dives, and cheat sheets that guide everyday engineering
+        decisions.
+      </p>
+      <div class="blog_grid" aria-live="polite"></div>
     </section>
 
     <section class="footer">
@@ -151,6 +116,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
     <script src="assets/js/app.js" defer></script>
-    <script src="assets/js/random_dots.js" defer></script>
   </body>
 </html>

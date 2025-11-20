@@ -14,9 +14,9 @@
       rel="stylesheet" />
     <script src="https://kit.fontawesome.com/de1af96c6d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Mahmoud Hamza | Portfolio</title>
+    <title>Projects | Mahmoud Hamza</title>
   </head>
-  <body data-page="home">
+  <body data-page="projects">
     <header>
       <nav class="nav">
         <div class="list_container">
@@ -40,55 +40,42 @@
       </nav>
     </header>
 
-    <section class="main" id="home">
-      <div class="random-dots"><div class="dots_overlay"></div></div>
-      <div class="main_sec">
-        <div class="side main_img center_v">
-          <img class="personal_img" src="./assets/images/hamza.jpg" alt="Hamza image" />
-        </div>
-        <div class="content_wrapper center_v">
-          <div class="side main_content">
-            <h2>
-              Hi There,<br />
-              I'm Mahmoud <span>Hamza</span>
-            </h2>
-            <p>I am a <span class="typing"></span></p>
-            <div class="hero_cta">
-              <a class="primary_btn" href="projects.html">View Projects</a>
-              <a class="secondary_btn" href="blog.html">Read Blog</a>
-            </div>
-          </div>
-        </div>
+    <section class="page_heading">
+      <div class="page_heading_inner">
+        <h1>Project Showcase</h1>
+        <p>
+          Search and filter through production-ready builds spanning frontend, backend, and full-stack work.
+        </p>
       </div>
     </section>
 
-    <section class="home_gateway sec-wrapper">
-      <h2 class="sec_title gateway_title"><i class="fa-solid fa-compass"></i>Explore <span>More</span></h2>
-      <div class="gateway_container">
-        <article class="gateway_card">
-          <h3>About &amp; Skills</h3>
-          <p>Learn the story, stack, and values that shape every solution I build.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="about.html">About</a>
-            <a class="gateway_link gateway_link--ghost" href="skills.html">Skills</a>
-          </div>
-        </article>
-        <article class="gateway_card">
-          <h3>Experience Timeline</h3>
-          <p>Trace military service, internships, and freelance wins across a single roadmap.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="experience.html">View Timeline</a>
-          </div>
-        </article>
-        <article class="gateway_card">
-          <h3>Projects &amp; Writing</h3>
-          <p>Review production-grade case studies and blog notes from the learning journey.</p>
-          <div class="gateway_links">
-            <a class="gateway_link" href="projects.html">All Projects</a>
-            <a class="gateway_link gateway_link--ghost" href="blog.html">Blog</a>
-          </div>
-        </article>
+    <section class="projects_page sec-wrapper">
+      <h2 class="sec_title projects_sec_title">
+        <i class="fa-solid fa-laptop-code"></i>All <span>Projects</span>
+      </h2>
+      <p class="projects_intro">
+        Every project below ships with a public repository and live demo—use the filters to jump straight to
+        the stack or product type you need.
+      </p>
+      <div class="projects_controls">
+        <label class="projects_search" for="projectSearch">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            id="projectSearch"
+            name="projectSearch"
+            placeholder="Search by project name..."
+            aria-label="Search projects by name or type"
+            autocomplete="off" />
+        </label>
+        <div class="projects_filter_group" role="group" aria-label="Filter projects by type">
+          <button type="button" class="project_filter active" data-type="all">All</button>
+          <button type="button" class="project_filter" data-type="fullstack">Fullstack</button>
+          <button type="button" class="project_filter" data-type="frontend">Frontend</button>
+          <button type="button" class="project_filter" data-type="backend">Backend</button>
+        </div>
       </div>
+      <div class="projects_grid" aria-live="polite"></div>
     </section>
 
     <section class="footer">
@@ -151,6 +138,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
     <script src="assets/js/app.js" defer></script>
-    <script src="assets/js/random_dots.js" defer></script>
   </body>
 </html>
