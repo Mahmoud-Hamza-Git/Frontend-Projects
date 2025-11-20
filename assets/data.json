@@ -1,6 +1,19 @@
 {
   "fullstack": [
     {
+      "name": "Hi-Teck CRM System 📊",
+      "desc": "CRM system for a construction firm that reduced project tracking time by 40% and enabled real-time collaboration across 5 departments, implementing role-based access control, real-time dashboards, and a secure file management system.",
+      "img": "./assets/images/hi_teck.png",
+      "demo_link": "https://www.freelancer.com/projects/react-js/Full-Stack-Developer-for-Custom?sb=t"
+    },
+    {
+      "name": "Happy Shop 🛒",
+      "desc": "A Fullstack E-commerce app using MERN STACK (MongoDB, Express.js, React.js, Node.js) with JWT Authentication🔐, Redux Toolkit🛠️ and Stripe Payment💳 integration.",
+      "img": "./assets/images/happy_shop.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/happy_shop",
+      "demo_link": "https://happy-shop-seven.netlify.app/"
+    },
+    {
       "name": "Your Notes 📝",
       "desc": "A MERN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
       "img": "./assets/images/your_note.jpg",
@@ -13,6 +26,12 @@
       "img": "./assets/images/snappy-chat.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/realtime-chatapp",
       "demo_link": "https://snapy-app.onrender.com/"
+    },
+    {
+      "name": "DiagnoseMe Main🏥",
+      "desc": "Diagnose-Me is an applicationiphone for improving users' lives by providing medical care, early diagnosis 👨‍⚕️, medication providers ⚕, the chance to ask doctors ❓, medical blogs 📰, and more.",
+      "img": "./assets/images/diagnose_admin.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/diagnose-me"
     },
     {
       "name": "To_Do ✍️",
@@ -97,9 +116,9 @@
   ],
   "backend": [
     {
-      "name": "DiagnozeMe_Chat API",
+      "name": "DiagnoseMe_Chat API",
       "desc": "A Chat and Booking service API using node.js and socket.io(Authentication - Authorization - JWT - Date manipulation)",
-      "img": "./assets/images/diagnoze_me.png",
+      "img": "./assets/images/diagnose_me.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Backend_Projects/tree/chat",
       "demo_link": "#home"
     },

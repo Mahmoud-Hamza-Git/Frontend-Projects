@@ -184,8 +184,16 @@ async function initProjectsPage() {
               <p>${project.desc}</p>
             </div>
             <div class="project_actions">
-              <a href="${project.repo_link}" target="_blank" rel="noopener noreferrer">Repo</a>
-              <a href="${project.demo_link}" target="${demoTarget}"${demoRel}>Live</a>
+              ${
+                project.repo_link
+                  ? `<a href="${project.repo_link}" target="_blank" rel="noopener noreferrer">Repo</a>`
+                  : ""
+              }
+              ${
+                project.demo_link
+                  ? `<a href="${project.demo_link}" target="${demoTarget}"${demoRel}>Live</a>`
+                  : ""
+              }
             </div>
           </article>
         `;
@@ -279,6 +287,22 @@ async function initBlogPage() {
     .join("");
 
   blogGrid.innerHTML = cards;
+}
+
+if (document.body?.classList.contains("notfound_page")) {
+  document.addEventListener("mousemove", (event) => {
+    const orb = document.querySelector(".notfound_orb");
+    if (!orb) return;
+
+    const orbRect = orb.getBoundingClientRect();
+    const centerX = orbRect.left + orbRect.width / 2;
+    const centerY = orbRect.top + orbRect.height / 2;
+    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
+    const rotateDeg = angle * (180 / Math.PI);
+
+    orb.style.setProperty("--rotate", `${rotateDeg}deg`);
+    orb.style.transform = `translateY(-6px) rotate(${rotateDeg}deg)`;
+  });
 }
 
 function getWritingSummary(name = "") {
