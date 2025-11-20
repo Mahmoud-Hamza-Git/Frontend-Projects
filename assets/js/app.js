@@ -161,9 +161,11 @@ async function initProjectsPage() {
 
   function renderProjects(projects) {
     if (!projects.length) {
+      projectsGrid.style.gridTemplateColumns = "1fr";
       projectsGrid.innerHTML = `<div class="projects_empty">No projects match your filters just yet. Try a different keyword or type.</div>`;
       return;
     }
+    projectsGrid.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
 
     const cards = projects
       .map((project) => {

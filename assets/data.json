@@ -14,15 +14,15 @@
       "demo_link": "https://happy-shop-seven.netlify.app/"
     },
     {
-      "name": "Your Notes 📝",
-      "desc": "A MERN STACK based app using node.js, react.js and mongoDB. Includes Localization📍 and Dark theme🦇",
+      "name": "Think Pad 📝",
+      "desc": "A MERN-stack notes manager built with React, Node.js, and MongoDB, offering fast, secure, and persistent note handling.Features built-in localization 📍 and a sleek dark theme 🦇 for a personalized experience.",
       "img": "./assets/images/your_note.jpg",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/YourNotes-App",
       "demo_link": "https://yournotes-mahmoud-hamza-git.vercel.app/"
     },
     {
       "name": "Snappy - Chat Application💬",
-      "desc": "A Real time chat application 💬 using react.js, node.js, express, socket.io and mongoDB",
+      "desc": "A Real-time chat app 💬 built with React, Node.js, Express, Socket.IO, and MongoDB, offering instant messaging, emoji reactions, and live presence/typing indicators. Includes user authentication, persistent message storage.",
       "img": "./assets/images/snappy-chat.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/realtime-chatapp",
       "demo_link": "https://snapy-app.onrender.com/"
@@ -35,59 +35,65 @@
     },
     {
       "name": "To_Do ✍️",
-      "desc": "Todo list app using node, express, mongoDB, ejs render template",
+      "desc": "A full-stack To-Do app built with Node.js, Express, MongoDB, and EJS for server-side rendering, offering persistent task management with CRUD functionality. Organized with RESTful routes and a clean, responsive UI for efficient task tracking across devices.",
       "img": "./assets/images/to_do.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/to_do_list",
       "demo_link": "https://to-do-list-t4b9.onrender.com/"
-    },
-    {
-      "name": "Task Manager ✅",
-      "desc": "task manager app using javavscript",
-      "img": "./assets/images/task_manager.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
-      "demo_link": "https://task-manager-54ug.onrender.com/"
     }
   ],
   "frontend": [
     {
-      "name": "Car Showroom 🚗",
-      "desc": "Adaptive Landing page using react.js 🚕 (responsive - localstorage implementation - context_API)",
-      "img": "./assets/images/car_showroom1.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
-      "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
+      "name": "Video Call App 🎥",
+      "desc": "A real-time video call app 💻 using WebSocket and WebRTC to create secure peer-to-peer video and audio streams between users. Built with Node.js and Socket.IO for signaling, it offers low-latency connections, responsive UI, and seamless media handling for one-to-one video streaming.",
+      "img": "./assets/images/video_call.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Video-call",
+      "demo_link": "https://video-call-gray-gamma.vercel.app/"
+    },
+    {
+      "name": "Bankist💰",
+      "desc": "A modern landing page built with HTML, CSS, and JavaScript, showcasing smooth lazy-loading images📷 for optimized performance. Designed with clean UI sections, interactive elements, and a seamless scrolling experience.",
+      "img": "./assets/images/bankist.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/bankist",
+      "demo_link": "https://bankist-app-page.netlify.app/"
     },
     {
       "name": "Kalbonyan Board",
-      "desc": "Kanban Board using javascript. (Drag & Drop🎯 - Touch Screens compatiblity🤳 - permenant data using localstorage)",
+      "desc": "Feature-rich Kanban board built with vanilla JavaScript, supporting drag & drop and optimized for touch screens for smooth mobile use 🤳. Persists boards and tasks in localStorage for permanent data storage.",
       "img": "./assets/images/board_project3.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Kalbonyan_Board",
       "demo_link": "https://kalbonyan-board.netlify.app/"
     },
     {
-      "name": "Video Call App 🎥",
-      "desc": "Video Streeming app 💻 using Web Socket and WebRTC to make a peer to peer connection between to users (node.js - socket.io - webRTC)",
-      "img": "./assets/images/video_call.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/video_call",
-      "demo_link": "https://video-call-app-usy7.onrender.com/"
+      "name": "Quiz App",
+      "desc": "nteractive React Quiz App built with Vite that guides users through multiple-choice questions. Features real-time progress tracking and immediate feedback to enhance learning. Responsive design with a summary of results highlighting strengths and knowledge gaps.",
+      "img": "./assets/images/quiz.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Quiz-App",
+      "demo_link": "https://hamza-quiz.netlify.app/"
     },
     {
-      "name": "Appie",
-      "desc": "Adaptive landing page using HTML & CSS",
-      "img": "./assets/images/appie_app.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
-      "demo_link": "https://appie-site1.netlify.app/"
+      "name": "Car Showroom 🚗",
+      "desc": "A responsive React.js landing page for a car showroom 🚕 Built with Context API and localStorage to manage state and user preferences for a seamless browsing experience.",
+      "img": "./assets/images/car_showroom1.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/car_showroom",
+      "demo_link": "https://car-showroom-mahmoud-hamza-git.vercel.app/"
     },
-
     {
       "name": "Omnifood",
-      "desc": "Omnifood app is landing page using HTML&CSS and JavaScript",
+      "desc": "Omnifood is a modern landing page built with HTML, CSS, and JavaScript, featuring clean design, smooth interactions, and a fully responsive layout for all devices.",
       "img": "./assets/images/omnifood.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/omnifood",
       "demo_link": "https://hamza-omnifood.netlify.app/"
     },
     {
+      "name": "TecNo 👨‍💻",
+      "desc": "A fully responsive e-commerce web application supports a multi-role system for customers, sellers, and administrators, each with dedicated dashboards and workflows. Designed as a SPA backed by client-side storage using localStorage and IndexedDB.",
+      "img": "./assets/images/tecno.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/cst-project-iti",
+      "demo_link": "https://cst-project-xi.vercel.app/"
+    },
+    {
       "name": "Simon Game",
-      "desc": "simon game using Jquery & Javascript",
+      "desc": "A fun, interactive Simon Game built with JavaScript and jQuery, featuring color-pattern memory challenges and smooth, responsive animations.",
       "img": "./assets/images/simon.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/simon_game",
       "demo_link": "https://hamza-simon-game.netlify.app/"
@@ -101,17 +107,24 @@
     },
     {
       "name": "Dice Game🎲",
-      "desc": "A Game challenge between 2 players, implemented by HTML, CSS and JavaScript",
+      "desc": "A competitive two-player game built with HTML, CSS, and JavaScript, featuring fast, interactive gameplay and dynamic score tracking with clean, responsive interface.",
       "img": "./assets/images/dice.png",
       "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/dice_game",
       "demo_link": "https://dice-game-challenge.netlify.app/"
     },
     {
-      "name": "Bankist💰",
-      "desc": "A Landing page contains lazy loading images, implemented by HTML, CSS and JavaScript",
-      "img": "./assets/images/bankist.png",
-      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Frontend-Projects/tree/bankist",
-      "demo_link": "https://bankist-app-page.netlify.app/"
+      "name": "Task Manager ✅",
+      "desc": "task manager app using javavscript",
+      "img": "./assets/images/task_manager.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Fullstack_Projects/tree/task_manager",
+      "demo_link": "https://task-manager-54ug.onrender.com/"
+    },
+    {
+      "name": "Appie",
+      "desc": "Adaptive landing page using HTML & CSS with a modern design layout.",
+      "img": "./assets/images/appie_app.png",
+      "repo_link": "https://github.com/Mahmoud-Hamza-Git/Appie-Site",
+      "demo_link": "https://appie-site1.netlify.app/"
     }
   ],
   "backend": [
